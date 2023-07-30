@@ -1,17 +1,17 @@
 import pandas as pd
 import streamlit as st
-json_file = st.text_input("Enter the path: ")
-if json_file:
-    try:
-        with open(json_file, encoding='utf-8') as inputFile:
-            df = pd.read_json(inputFile)
-        st.write("Json file has loaded successfully")
-    except FileNotFoundError:
-        st.write("File not found, please make sure the file path is correct.")
-locate_csv_file=st.text_input("enter the path to save CSV file : ")
-if locate_csv_file:
-    try:
-        df.to_csv(locate_csv_file, encoding='utf-8', index=False)
-        st.write("CSV file saved successfully!")
-    except Exception:
-        st.write("Error has occurred ",Exception)
+#uploade the file
+uploaded_file = st.file_uploader("Choose a JSon file: ", type="json")
+if uploaded_file is not None:
+    df=pd.read_json(uploaded_file)
+    
+    #converts json file to csv file
+    Csv_file=df.to_csv(index=False).encode()
+
+#download the csv file to your system
+    st.download_button(
+        label="Download the csv file",
+        data='csv_file',
+        file_name='converted_file.csv',
+        mime='csv',
+    )
