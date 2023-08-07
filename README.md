@@ -1,7 +1,7 @@
 # JSON2CSV-adventure
 
 ## Intro
-JSON and CSV are two of the most common formats for storing and transferring data. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. CSV (Comma-Separated Values), on the other hand, is a simple file format used to store tabular data, such as a spreadsheet or database.
+JSON and CSV are two of the most common formats for storing and transferring data. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate.
 
 Our JSON to CSV converter bridges the gap between these two formats. This utility allows you to easily convert data from JSON format to CSV format. With this tool, you can transform complex JSON data structures into a flat CSV format, making your data ready for analysis in your tool of choice.
 
