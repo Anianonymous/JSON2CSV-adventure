@@ -3,10 +3,10 @@ import streamlit as st
 #uploade the file
 uploaded_file = st.file_uploader("Choose a JSon file: ", type="json")
 if uploaded_file is not None:
-    df=pd.read_json(uploaded_file)
+    res=pd.read_json(uploaded_file)
     
     #converts json file to csv file
-    Csv_file=df.to_csv(index=False).encode()
+    Csv_file=res.to_csv(index=False).encode()
 
 #download the csv file to your system
     st.download_button(
